@@ -19,8 +19,8 @@ public class StudentDalApplicationTests {
 	@Test
 	public void testCreateStudent() {
 		Student student = new Student();
-		student.setName("John");
-		student.setCourse("Java Web Services");
+		student.setName("Abhi");
+		student.setCourse("Java Web Services Crash Course");
 		student.setFee(30d);
 		studentRepository.save(student);
 	}
