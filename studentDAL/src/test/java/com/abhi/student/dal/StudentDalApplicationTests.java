@@ -1,5 +1,7 @@
 package com.abhi.student.dal;
 
+import java.util.Optional;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,12 @@ public class StudentDalApplicationTests {
 		student.setCourse("Java Web Services Crash Course");
 		student.setFee(30d);
 		studentRepository.save(student);
+	}
+	
+	@Test
+	public void testFindStudentById() {
+		Optional<Student> findById = studentRepository.findById(2l);
+		System.out.println(findById);
 	}
 
 }
