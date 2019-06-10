@@ -29,7 +29,7 @@ public class StudentDalApplicationTests {
 	
 	@Test
 	public void testFindStudentById() {
-		Optional<Student> findById = studentRepository.findById(2l);
+		Optional<Student> findById = (Optional<Student>) studentRepository.findById(2l);
 		System.out.println(findById);
 	}
 
